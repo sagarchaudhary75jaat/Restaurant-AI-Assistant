@@ -1,0 +1,416 @@
+/* Menu Section Styles */
+.menu-section {
+  background-color: var(--bg-primary);
+  position: relative;
+}
+
+/* Category Filter Tabs */
+.menu-controls {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  margin-bottom: 48px;
+}
+
+.meal-tabs {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: var(--bg-secondary);
+  padding: 6px;
+  border-radius: var(--radius-full);
+  border: 1px solid var(--border-subtle);
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.meal-tab-btn {
+  padding: 10px 24px;
+  border-radius: var(--radius-full);
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  transition: all var(--transition-fast);
+}
+
+.meal-tab-btn.active {
+  background: linear-gradient(135deg, #EA580C 0%, #D97706 100%);
+  color: #FFFFFF;
+  box-shadow: 0 4px 14px rgba(234, 88, 12, 0.28);
+}
+
+.meal-tab-btn:hover:not(.active) {
+  color: var(--accent-orange);
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+/* Secondary Filters (Search & Veg Only) */
+.secondary-filters {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+  max-width: 680px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.menu-search-wrapper {
+  position: relative;
+  flex: 1;
+  min-width: 240px;
+}
+
+.menu-search-input {
+  width: 100%;
+  padding: 12px 18px 12px 42px;
+  border-radius: var(--radius-full);
+  border: 1.5px solid var(--border-subtle);
+  background-color: #FFFFFF;
+  font-size: 0.95rem;
+  color: var(--text-primary);
+  transition: all var(--transition-fast);
+}
+
+.menu-search-input:focus {
+  border-color: var(--accent-gold);
+  box-shadow: 0 0 0 3px rgba(217, 119, 6, 0.15);
+}
+
+.menu-search-icon {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-muted);
+  font-size: 1rem;
+}
+
+.veg-filter-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 11px 20px;
+  border-radius: var(--radius-full);
+  border: 1.5px solid var(--border-subtle);
+  background-color: #FFFFFF;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  transition: all var(--transition-fast);
+  user-select: none;
+}
+
+.veg-filter-toggle.active {
+  border-color: var(--veg-color);
+  background-color: var(--veg-bg);
+  color: var(--veg-color);
+}
+
+/* Notice Banner */
+.menu-backend-notice {
+  background: linear-gradient(135deg, #FFFBEB 0%, #FEF3C7 100%);
+  border: 1px solid #FCD34D;
+  border-radius: var(--radius-lg);
+  padding: 20px 24px;
+  margin-bottom: 40px;
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  box-shadow: var(--shadow-sm);
+}
+
+.menu-backend-notice .notice-icon {
+  font-size: 1.5rem;
+  color: #D97706;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.notice-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #92400E;
+  margin-bottom: 4px;
+}
+
+.notice-text {
+  font-size: 0.92rem;
+  color: #78350F;
+  line-height: 1.55;
+}
+
+.notice-action-btn {
+  margin-top: 10px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #B45309;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* Dishes Grid */
+.dishes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 28px;
+}
+
+/* Dish Card */
+.dish-card {
+  background-color: var(--bg-card);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--border-subtle);
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  transition: all var(--transition-normal);
+  position: relative;
+}
+
+.dish-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-md);
+  border-color: rgba(217, 119, 6, 0.4);
+}
+
+.dish-card-media {
+  position: relative;
+  height: 220px;
+  background-color: var(--bg-secondary);
+  overflow: hidden;
+}
+
+.dish-card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-smooth);
+}
+
+.dish-card:hover .dish-card-image {
+  transform: scale(1.05);
+}
+
+.dish-placeholder-media {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: linear-gradient(135deg, #F5EFEB 0%, #EBDDCF 100%);
+  color: var(--accent-orange);
+  font-size: 2.5rem;
+}
+
+.dish-placeholder-text {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+/* Card Badges */
+.card-top-badges {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  right: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  pointer-events: none;
+}
+
+.famous-badge {
+  background: linear-gradient(135deg, #EA580C 0%, #D97706 100%);
+  color: #FFFFFF;
+  padding: 5px 12px;
+  border-radius: var(--radius-full);
+  font-size: 0.75rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.mealtime-badge {
+  background: rgba(30, 23, 20, 0.8);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  color: #FFFFFF;
+  padding: 5px 10px;
+  border-radius: var(--radius-full);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+/* Card Body */
+.dish-card-body {
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.dish-header-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.dish-name {
+  font-family: var(--font-serif);
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1.25;
+}
+
+/* Veg / Non-Veg Indicator Symbol */
+.dietary-symbol {
+  width: 18px;
+  height: 18px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 4px;
+}
+
+.dietary-symbol.veg {
+  border: 2px solid var(--veg-color);
+}
+
+.dietary-symbol.veg .inner-mark {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--veg-color);
+}
+
+.dietary-symbol.nonveg {
+  border: 2px solid var(--nonveg-color);
+}
+
+.dietary-symbol.nonveg .inner-mark {
+  width: 0;
+  height: 0;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-bottom: 7px solid var(--nonveg-color);
+}
+
+.dish-category-tag {
+  display: inline-block;
+  background-color: var(--bg-secondary);
+  color: var(--text-muted);
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 3px 10px;
+  border-radius: var(--radius-full);
+  margin-bottom: 10px;
+  width: fit-content;
+}
+
+.dish-description {
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  margin-bottom: 16px;
+  flex: 1;
+}
+
+/* Card Footer */
+.dish-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 14px;
+  border-top: 1px solid var(--border-subtle);
+  margin-top: auto;
+}
+
+.dish-price-block {
+  display: flex;
+  flex-direction: column;
+}
+
+.dish-price-label {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.dish-price-val {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  font-family: var(--font-serif);
+}
+
+.dish-availability-badge {
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: var(--radius-full);
+}
+
+.dish-availability-badge.available {
+  background-color: var(--veg-bg);
+  color: var(--veg-color);
+}
+
+.dish-availability-badge.unavailable {
+  background-color: #FEE2E2;
+  color: #B91C1C;
+}
+
+.ask-dish-ai-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 14px;
+  border-radius: var(--radius-full);
+  background-color: var(--accent-orange-soft);
+  color: var(--accent-orange);
+  font-size: 0.82rem;
+  font-weight: 600;
+  border: 1px solid rgba(234, 88, 12, 0.2);
+  transition: all var(--transition-fast);
+}
+
+.ask-dish-ai-btn:hover {
+  background-color: var(--accent-orange);
+  color: #FFFFFF;
+}
+
+/* Empty State */
+.empty-menu-state {
+  text-align: center;
+  padding: 60px 20px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.empty-menu-state svg {
+  font-size: 3rem;
+  color: var(--accent-gold);
+  margin-bottom: 16px;
+}
